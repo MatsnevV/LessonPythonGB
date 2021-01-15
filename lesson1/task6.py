@@ -21,14 +21,10 @@
 
 a = int(input('Введите результат первого дня в км: '))
 b = int(input('Введите конечный результат : '))
-
 count = 1
-
 print(f'{count}-й день: {round(a, 2)}')
-
 while a < b:
     a *= 1.1
     count += 1
     print(f'{count}-й день: {str(round(a, 2)).replace(".",",")}')
-
 print(f'Ответ: на {count}-й день спортсмен достиг результата — не менее 3 км.')

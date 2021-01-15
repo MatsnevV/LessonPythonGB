@@ -13,13 +13,11 @@ raskhod_in = int(input('Введите сумму издержек фирмы : 
 if summa_in >= raskhod_in:
     pribl = summa_in - raskhod_in
     rentabelnost = (pribl / raskhod_in) * 100
-
     print('Поздравляю у Вас прибыль! — выручка больше издержек')
     print(f'Прибыль Вашей фирма составило {pribl} и рентабельность {round(rentabelnost, 2)}')
 
     chisle_firm = int(input('Введите численность сотрудников фирмы: '))
     print(f'Прибыль фирмы в расчете на одного сотрудника составила: {round(pribl / chisle_firm, 2)}')
-
 else:
     print('У Вас убыток! — издержки больше выручки')
 
