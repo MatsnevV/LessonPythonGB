@@ -5,10 +5,10 @@
 Строки необходимо пронумеровать.
 Если в слово длинное, выводить только первые 10 букв в слове.
 """
-stroka = input('введи предложение: ')
-ls = stroka
+stroka = input('введи предложение: ').split()
+
 count = 1
 
-for i in ls:
+for i in stroka:
     print(f'{count}) {i[:10]}')
     count += 1

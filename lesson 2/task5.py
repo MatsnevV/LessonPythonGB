@@ -11,3 +11,13 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+import random
+
+chislo_in = int(input('введи число: '))
+rayd = []
+for i in range(1, 10, 1):
+    rayd.append(random.randint(1, 9))
+
+print(rayd)
+rayd.append(chislo_in)
+print(f'Пользователь ввел число {chislo_in}. Результат:{sorted(rayd, reverse=True)}.')
