@@ -27,3 +27,39 @@
 
 }
 """
+kol_iter = int(input('Введи количество наименований: '))
+spisok = []
+
+for i in range(kol_iter):
+    print('===================')
+    print(f'Введите описание {i + 1} товара')
+    name_in = input('“название”:')
+    price_in = input('“цена”:')
+    quantity_in = input('“количество”:')
+    unit_in = input('“ед”:')
+    spisok.append(
+        {
+            'название': name_in,
+            'цена': price_in,
+            'количество': quantity_in,
+            'ед': unit_in
+        }
+    )
+
+name_out = list()
+price_out = list()
+quantity_out = list()
+unit_out = list()
+
+for j in range(kol_iter):
+    name_out.append(spisok[j]['название'])
+    price_out.append(spisok[j]['цена'])
+    quantity_out.append(spisok[j]['количество'])
+    unit_out.append(spisok[j]['ед'])
+
+
+unit_set = list(set(unit_out))
+print(f'“название”: {name_out},')
+print(f'“цена”: {price_out},')
+print(f'“количество”: {price_out},')
+print(f'“ед”: {unit_set},')
