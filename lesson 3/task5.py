@@ -9,29 +9,18 @@
   то вначале нужно добавить сумму этих чисел к полученной ранее сумме и после этого завершить программу.
 """
 
-summa_chisel = 0
 
+text = ''
+total_sum = 0
 
-def summ_in(ryad_def):
-    k = 0
-    #ls = list(map(int, ryad_def))
-    print(ryad_def)
-    for i in ryad_def:
-        k += i
-    print(k)
+while 'q' not in text:
+    text = input('Введи ряд чисел через пробел!а для выхода нажми "q"\n> ')
+    print(text)
+    numbers_as_string = text.replace('q', ' ').split()
+    numbers = [int(n) for n in numbers_as_string]
+    total_sum += sum(numbers)
+    print(f'итовая сумма: {total_sum} ')
 
-
-while True:
-    ryad_out = []
-    ryad_in = input('Введи ряд чисел через пробел!а для выхода нажми "q"\n> ')
-    print(ryad_in)
-    for i in list(ryad_in.split(' ')):
-        if i != 'q':
-            ryad_out.append()
-        else:
-            summ_in(ryad_out)
-            break
-    summ_in(ryad_out)
 
 
 

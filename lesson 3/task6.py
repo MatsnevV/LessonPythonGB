@@ -16,5 +16,12 @@ def int_func(my_str):
         return my_str[0].upper() + my_str[1:]
     return my_str
 
-print(int_func(input('Введите слво или предложение.\n>')))
 
+def int_func_strora(my_str):
+    ls = my_str.split()
+    for i, j in enumerate(ls):
+        ls[i] = int_func(j)
+    return ' '.join(ls)
+
+
+print(int_func_strora(input('Введите слво или предложение.\n>')))

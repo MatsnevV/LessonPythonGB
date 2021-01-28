@@ -6,27 +6,29 @@
 Реализовать вывод данных о пользователе одной строкой.
 """
 
+ls = ['имя',
+      'фамилия',
+      'год рождения',
+      'город проживания',
+      'email',
+      'телефон',
+      ]
+
 
 def spisok(**dict_sprav):
     """
     имя, фамилия, год рождения, город проживания, email, телефон
     """
-    for i in dict_sprav:
-        print(f'{i} : {dict_sprav[i]}')
+    print(dict_sprav)
+    for i, j in enumerate(dict_sprav):
+        print(f'{ls[i]} : {dict_sprav[j]}')
 
 
-my_dict = {'имя': name,
-           'фамилия': first_name,
-           'год рождения': year,
-           'город проживания': city,
-           'email': email,
-           'телефон': telephone,
-           }
-
-spisok(name=input('Введи имя:\n>'),
-       first_name=input('Введи фамилию:\n>'),
-       year=input('Введи год рождения:\n>'),
-       city=input('Введи город проживания:\n>'),
-       email=input('Введи email:\n>'),
-       telephone=input('Введи телефон:\n>')
-       )
+spisok(
+    name=input('Введи имя:\n>'),
+    first_name=input('Введи фамилию:\n>'),
+    year=input('Введи год рождения:\n>'),
+    city=input('Введи город проживания:\n>'),
+    email=input('Введи email:\n>'),
+    telephone=input('Введи телефон:\n>')
+)
