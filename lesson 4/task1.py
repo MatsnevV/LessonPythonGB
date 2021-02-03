@@ -4,8 +4,10 @@
 Для выполнения расчета для конкретных значений необходимо запускать скрипт с параметрами
 """
 from sys import argv
-name, t, zp, prem = argv
-print(f'Скрипт {name} отработал.\nЗароботная плата составила: {int(t) * int(zp) + int(prem)}')
+
+
+name_str , t, zp, prem = argv
+print(f'Скрипт {name_str} отработал.\nЗароботная плата составила: {int(t) * int(zp) + int(prem)}')
 
 
 

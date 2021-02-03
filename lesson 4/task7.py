@@ -12,9 +12,9 @@
 def fact(num):
     k = 1
     for i in range(1, num + 1):
-        k = k * i
+        k *= i
         yield k
-
+        
 
 n = int(input('Введите желаемый факториал\n>'))
 
