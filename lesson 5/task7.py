@@ -13,8 +13,7 @@
 [{"firm_1": 5000, "firm_2": 3000, "firm_3": 1000}, {"average_profit": 2000}]
 Подсказка: использовать менеджеры контекста.
 """
+import json
 
-
-with open("text.txt") as f_obj:
 
 

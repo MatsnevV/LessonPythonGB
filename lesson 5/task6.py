@@ -13,4 +13,31 @@
 
 {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
-with open("text.txt") as f_obj:
+
+import re
+
+
+my_dict = {}
+
+
+def cel_chis(str_chis):
+    k = re.findall(r'\d+', str_chis)
+    res = sum(map(int, k))
+    return res
+
+
+def razbor(stroky):
+    znach = 0
+    for i in stroky:
+        str_name = i. split(':')
+        my_dict[str_name[0]] = cel_chis(i)
+    return my_dict
+
+
+with open("text_task6.txt") as f_obj:
+    content = f_obj.readlines()
+    print(razbor(content))
+
+
+
+

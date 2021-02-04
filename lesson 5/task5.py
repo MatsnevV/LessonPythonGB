@@ -15,5 +15,7 @@ try:
     print(f'Сумма составила: {count_str}')
 except IOError:
     print("Произошла ошибка ввода-вывода!")
+except ValueError:
+    print('Введен пробе в конце .не допустимо!')
 finally:
     my_f.close()
